@@ -1,5 +1,7 @@
 # Projeto Cofrinho
 
+Sou o cara da Foto!
+
 Este projeto é um exercício de programação orientada a objetos em java. A partir do código disponibilizado o estudante deve programar as classes do pacote model de forma que o software funcione corretamente. 
 
 No diretório assets está disponibilizado o diagrama de classes do projeto.
