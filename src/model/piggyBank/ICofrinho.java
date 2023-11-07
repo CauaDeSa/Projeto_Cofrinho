@@ -42,7 +42,7 @@ public interface ICofrinho {
      * Quebrar o cofrinho é jogar todas as moedas para fora e destruir os valores armazenados.
      * O cofrinho volta ao valor inicial, ou seja, fica sem moedas.
      * 
-     * @return As moedas que estavam no cofrinho são empilhadas e devolvidas em um objeto Montinhos que possue um Montinho para cada tipo de moeda existente no  cofrinho.
+     * @return As moedas que estavam no cofrinho são empilhadas e devolvidas em um objeto Montinhos que possui um Montinho para cada tipo de moeda existente no  cofrinho.
      */
     Montinhos quebrarCofrinho();
 }
