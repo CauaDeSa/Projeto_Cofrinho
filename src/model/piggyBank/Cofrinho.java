@@ -7,10 +7,8 @@ import java.util.ArrayList;
 public class Cofrinho implements ICofrinho {
     
     private List<Moeda> moedas;
-
-    public Cofrinho(){
-        //TODO: implementar
-    }
-
     
+    public void insereMoeda(Moeda coin){
+        
+    }
 }

@@ -4,12 +4,16 @@ public class Cinco extends Moeda{
 
     @Override
     public double getValue() {
-        //TODO: implementar
+        return 0.05;
     }
 
     @Override
     public boolean equals(Object obj) {
-        //TODO: implementar
+        if(obj instanceof Cinco){
+            return true;
+        }
+
+        return false;
     }
 
     @Override

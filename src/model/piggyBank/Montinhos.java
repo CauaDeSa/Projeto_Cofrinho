@@ -20,7 +20,19 @@ public class Montinhos {
      * @return
      */
     public boolean add(Montinho montinho){
-        //TODO: implementar
+        boolean isThere = false;
+        
+        for(Montinho obj : montinhos){
+            if (obj.getCoin() == montinho.getCoin()) {
+                isThere = true;
+            }
+        }
+
+        if(!isThere){
+            return montinhos.add(montinho);
+        }
+        
+        return false;
     }
 
     /**
@@ -29,6 +41,12 @@ public class Montinhos {
      * @return
      */
     public Montinho get(Moeda coin){
-        //TODO: implementar
+        for(Montinho obj : montinhos){
+            if(obj.getCoin() == coin){
+                return obj;
+            }
+        }
+
+        return null;
     }
 }

@@ -3,12 +3,16 @@ package model.coin;
 public class Cinquenta extends Moeda{
     @Override
     public double getValue() {
-        //TODO: implementar
+        return 0.50;
     }
 
     @Override
     public boolean equals(Object obj) {
-        //TODO: implementar
+        if(obj instanceof Cinquenta){
+            return true;
+        }
+
+        return false;
     }
 
     @Override

@@ -3,12 +3,16 @@ package model.coin;
 public class UmReal extends Moeda{
     @Override
     public double getValue() {
-        //TODO: implementar
+        return 1.00;
     }
 
     @Override
     public boolean equals(Object obj) {
-        //TODO: implementar
+        if(obj instanceof UmReal){
+            return true;
+        }
+
+        return false;
     }
 
     @Override

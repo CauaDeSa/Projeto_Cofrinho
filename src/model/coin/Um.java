@@ -4,12 +4,16 @@ public class Um extends Moeda {
 
     @Override
     public double getValue() {
-        //TODO: implementar
+        return 0.01;
     }
 
     @Override
     public boolean equals(Object obj) {
-        //TODO: implementar
+        if(obj instanceof Um){
+            return true;
+        }
+
+        return false;
     }
 
     @Override
