@@ -32,7 +32,7 @@ public class Cofrinho implements ICofrinho {
 
     @Override
     public int quantidadeMoedas(){
-        return moedas.size;
+        return moedas.size();
     }
 
     @Override
@@ -40,7 +40,7 @@ public class Cofrinho implements ICofrinho {
         double value = 0;
 
         for(Moeda obj : moedas){
-            value += obj.getvalue;
+            value += obj.getValue();
         }
 
         return value;
@@ -50,13 +50,33 @@ public class Cofrinho implements ICofrinho {
     public Montinhos quebrarCofrinho(){
 
         Montinhos montinhos = new Montinhos();
+        int coinQuantity[] = new int[6];
+        double tester;
 
-        montinhos.add(new Montinho(new Um(), moedas.quantasMoedas(new Um)));
-        montinhos.add(new Montinho(new Cinco(), moedas.quantasMoedas(new Cinco)));
-        montinhos.add(new Montinho(new Dez(), moedas.quantasMoedas(new Dez)));
-        montinhos.add(new Montinho(new VinteCinco(), moedas.quantasMoedas(new VinteCinco)));
-        montinhos.add(new Montinho(new Cinquenta(), moedas.quantasMoedas(new Cinquenta)));
-        montinhos.add(new Montinho(new UmReal(), moedas.quantasMoedas(new UmReal)));
+        for(Moeda obj : moedas){
+            tester = obj.getValue();
+
+            if (tester == 0.01) {
+                coinQuantity[0]++;
+            } else if (tester == 0.05) {
+                coinQuantity[1]++;
+            } else if (tester == 0.10) {
+                coinQuantity[2]++;
+            } else if (tester == 0.25) {
+                coinQuantity[3]++;
+            } else if (tester == 0.50) {
+                coinQuantity[4]++;
+            } else if (tester == 1.00) {
+                coinQuantity[5]++;
+            }
+        }
+
+        montinhos.add(new Montinho(new Um(), coinQuantity[0]));
+        montinhos.add(new Montinho(new Cinco(), coinQuantity[1]));
+        montinhos.add(new Montinho(new Dez(), coinQuantity[2]));
+        montinhos.add(new Montinho(new VinteCinco(), coinQuantity[3]));
+        montinhos.add(new Montinho(new Cinquenta(), coinQuantity[4]));
+        montinhos.add(new Montinho(new UmReal(), coinQuantity[5]));
 
         return montinhos;
     }
